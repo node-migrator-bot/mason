@@ -1,7 +1,8 @@
 # Mason
 
 Simple static-file build system for jade, stylus, and JavaScript.
-Express middleware for rendering the HTML, CSS, and JS (debug or compiled).
+
+Includes express plugin for easily rendering HTML, CSS, and JS in both development and production.
 
 ## Build static files (mason.json resides in __dirname)
 ```javascript
