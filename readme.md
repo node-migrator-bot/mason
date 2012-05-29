@@ -3,13 +3,13 @@
 Simple static-file build system for jade, stylus, and JavaScript.
 Express middleware for rendering the HTML, CSS, and JS (debug or compiled).
 
-Build static files (mason.json resides in __dirname)
+## Build static files (mason.json resides in __dirname)
 ```javascript
   var mason = require('mason');
   mason.build(__dirname);
 ```
 
-Use mason in an express app
+## Use mason in an express app
 ```javascript
   var app = express(),
       config = {
@@ -19,7 +19,7 @@ Use mason in an express app
   app.locals(mason.locals(__dirname, config));
 ```
 
-Render a mason asset within a view
+## Render a mason asset within a view
 ```jade
 !!! 5
 html
@@ -28,7 +28,7 @@ html
     ...
 ```
 
-Specify build targets (in mason.json)
+## Specify build targets (in mason.json)
 ```json
 {
   "platform.js": {
