@@ -1,0 +1,24 @@
+{
+	"name": "mason",
+	"version": "0.0.1",
+	"description": "simple, fun, static-file builder for jade, stylus, and javascript",
+	"keywords": ["build", "compile", "concatenate", "minify", "uglify", "jade", "stylus", "javascript"],
+	"author": "Hunter Loftis <hunter@hunterloftis.com>",
+	"main": "./index",
+	"engines": { "node": ">= 0.4.x < 0.8.0" },
+	"scripts": {
+		"test": "make test"
+	},
+	"dependencies": {
+		"uglify-js": "latest",
+		"stylus": "latest",
+		"jade": "latest",
+		"node-fs": "latest",
+		"underscore": "latest"
+	},
+	"devDependencies": {
+		"mocha": "latest",
+		"express": "git://github.com/visionmedia/express.git",
+		"should": "latest"
+	}
+}

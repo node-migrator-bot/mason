@@ -1,0 +1,17 @@
+!!! 5
+html
+  head
+    != mason('platform.js')
+
+  body
+    h1 This is the header
+    p This is a paragraph
+    ul
+      li First
+      li Second
+      li Third
+
+    != mason('page.js')
+    script
+      console.log('A?', A);
+      console.log('B?', B);

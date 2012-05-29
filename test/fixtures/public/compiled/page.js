@@ -1,0 +1,1 @@
+var A="This is A",B="This is B"
