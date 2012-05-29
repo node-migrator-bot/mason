@@ -1,7 +1,6 @@
-!!! 5
-html
-  head
+extends layout
 
-  body
-    h1 Test.jade
-    p This should be compiled into a static .html file
+block body
+  h1 Test.jade
+  p This should be compiled into a static .html file
+  include partial
