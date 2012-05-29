@@ -26,10 +26,13 @@ Includes express plugin for easily rendering HTML, CSS, and JS in both developme
 html
   head
     != mason('platform.js')
-    ...
 ```
 
 ## Specify build targets (in mason.json)
+
+**base:** Tells mason.build() where to put your compiled files
+**src:** Used by mason.locals() to render URLs (eg, /compiled/platform.js instead of /work/project/public/compiled/platform.js)
+
 ```json
 {
   "platform.js": {
