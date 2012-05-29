@@ -4,6 +4,8 @@ Simple static-file build system for jade, stylus, and JavaScript.
 
 Includes express plugin for easily rendering HTML, CSS, and JS in both development and production.
 
+Express middleware for rendering the HTML, CSS, and JS (debug or compiled).
+
 ## Build static files (mason.json resides in __dirname)
 ```javascript
   var mason = require('mason');
