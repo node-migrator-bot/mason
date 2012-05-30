@@ -4,6 +4,14 @@ Simple static-file build system for jade, stylus, and JavaScript.
 
 Includes express plugin for easily rendering built-or-debug HTML, CSS, and JS.
 
+### Why?
+
+You have a dozen site-wide platform dependencies that you want to package in `platform.js`.
+You have per-page JS assets that you want to package in `page-name.js` files.
+During development, you need all of these assets to be included as separate, uncompiled files with line numbers.
+During production, you need to flip a switch to minify all these files and include them in the right places.
+You want to easily generate static html and css from jade and stylus.
+
 ## Add mason to your project
 ```shell
   $ npm install mason
@@ -36,7 +44,7 @@ html
     != mason('platform.js')
 ```
 
-## Specify build targets (in mason.json)
+## Specify build targets (mason.json)
 
 **base:** Tells mason.build() where to put your compiled files
 
