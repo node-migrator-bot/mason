@@ -1,5 +1,7 @@
 p This is included content
 != mason('page.js');
+p A and B should both be defined:
 script
-  console.log('A?', A);
-  console.log('B?', B);
+  document.write('A = ' + A);
+  document.write('<br />');
+  document.write('B = ' + B);

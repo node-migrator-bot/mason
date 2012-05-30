@@ -1,2 +1,3 @@
-<!DOCTYPE html><html><head></head><h1>Test.jade</h1><p>This should be compiled into a static .html file</p><p>This is included content</p><script src="compiled/page.js"></script><script>console.log('A?', A);
-console.log('B?', B);</script></html>
+<!DOCTYPE html><html><head></head><h1>Test.jade</h1><p>This should be compiled into a static .html file</p><p>This is included content</p><script src="compiled/page.js"></script><p>A and B should both be defined:</p><script>document.write('A = ' + A);
+document.write('<br />');
+document.write('B = ' + B);</script></html>

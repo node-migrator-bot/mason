@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var mason = require('../');
+var pkg = require('../package.json');
+
+program.name = 'mason';
+
+program
+  .version(pkg.version);
+
+program
+  .command('build')
+  .description('build mason.json targets')
+  .option('-j, --javascript [renderer]', 'specify the renderer for JS [uglify]', 'uglify')
+  .action(runBuild);
+
+program
+  .command('watch')
+  .description('build and watch mason.json targets')
+  .option('-j, --javascript [renderer]', 'specify the renderer for JS [uglify]', 'uglify')
+  .action(runWatch);
+
+if (process.argv.length < 3) {
+  runHelp();
+}
+else {
+  program.parse(process.argv);
+}
+
+function runBuild(options) {
+  mason.build(process.cwd(), {
+    'javascript': options.javascript
+  });
+}
+
+function runWatch(options) {
+  console.log('Not implemented yet -- coming soon!');
+}
+
+function runHelp(options) {
+  console.log(program.helpInformation());
+}

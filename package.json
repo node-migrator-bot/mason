@@ -6,6 +6,7 @@
 	"author": "Hunter Loftis <hunter@hunterloftis.com>",
 	"repository": { "type": "git", "url": "git@github.com:Skookum/mason.git" },
 	"main": "./index",
+	"bin": { "mason": "./bin/mason" },
 	"engines": { "node": ">= 0.4.x < 0.8.0" },
 	"scripts": {
 		"test": "make test"
@@ -15,7 +16,8 @@
 		"stylus": "latest",
 		"jade": "latest",
 		"node-fs": "latest",
-		"underscore": "latest"
+		"underscore": "latest",
+		"commander": "latest"
 	},
 	"devDependencies": {
 		"mocha": "latest",
