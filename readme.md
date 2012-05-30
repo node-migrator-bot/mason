@@ -14,15 +14,16 @@ During development, you need all of these assets to be included as separate, unc
 During production, you need to flip a switch to minify all these files and include them in the right places.
 You want to easily generate static html and css from jade and stylus.
 
-## Add mason to your project's package.json
+## Install mason
+
+```shell
+  $ npm install -g mason
+```
+or use package.json's devDependencies:
 ```json
   "dependencies":{
     "mason":"latest"
   }
-```
-(or into devDependencies if everything is static)
-```shell
-  $ npm install
 ```
 
 ## Render a mason asset within a view
@@ -41,6 +42,10 @@ use the settings in mason.json:
 or specify the type of renderer to use:
 ```shell
   $ mason build -j debug
+```
+or using devDependencies:
+```shell
+  $ node_modules/.bin/mason build
 ```
 
 ## mason.json
