@@ -26,6 +26,16 @@ or use package.json's devDependencies:
   }
 ```
 
+## Build static files
+use the settings in mason.json:
+```shell
+  $ mason build
+```
+or using devDependencies:
+```shell
+  $ node_modules/.bin/mason build
+```
+
 ## Render a mason asset within a view
 ```jade
 !!! 5
@@ -33,19 +43,11 @@ html
   head
     != mason('platform.js')
 ```
+By default, `mason build` injects compressed (uglified) script tags via the `!= mason()` local.
 
-## Build static files
-use the settings in mason.json:
-```shell
-  $ mason build
-```
-or specify the type of renderer to use:
+To inject individual scripts for debugging, use:
 ```shell
   $ mason build -j debug
-```
-or using devDependencies:
-```shell
-  $ node_modules/.bin/mason build
 ```
 
 ## mason.json
@@ -125,6 +127,13 @@ or using devDependencies:
 (mason.json resides in __dirname)
 
 ### Use mason in an express app
+```javascript
+  var app = express(),
+  app.locals(mason.locals(__dirname));
+```
+By default, mason.locals will inject a compressed (uglified) script into your view.
+
+To control how specific assets are injected, use:
 ```javascript
   var app = express(),
       config = {
