@@ -4,11 +4,19 @@ Simple static-file build system for jade, stylus, and JavaScript.
 
 Includes express plugin for easily rendering HTML, CSS, and JS in both development and production.
 
-## Build static files (mason.json resides in __dirname)
+## Add mason to your project
+```shell
+  $ npm install mason
+```
+
+## Build static files
 ```javascript
   var mason = require('mason');
-  mason.build(__dirname);
+  mason.build(__dirname, {
+    'page.js': 'uglify'
+  });
 ```
+(mason.json resides in __dirname)
 
 ## Use mason in an express app
 ```javascript
