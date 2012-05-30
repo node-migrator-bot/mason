@@ -20,6 +20,7 @@ You want to easily generate static html and css from jade and stylus.
     "mason":"latest"
   }
 ```
+(or into devDependencies if everything is static)
 ```shell
   $ npm install
 ```
