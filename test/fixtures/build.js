@@ -1,3 +1,5 @@
 var mason = require('../../index');
 
-mason.build(__dirname);
+mason.build(__dirname, {
+  'page.js': 'uglify'
+});

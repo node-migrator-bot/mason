@@ -1,4 +1,13 @@
 {
+  "test.html": {
+    "type": "jade",
+    "source": "views/test.jade",
+    "dest": {
+      "base": "public",
+      "src": "test.html"
+    }
+  },
+
   "platform.js": {
     "type": "javascript",
     "source": {
@@ -35,15 +44,6 @@
     "dest": {
       "base": "public",
       "src": "compiled/global.css"
-    }
-  },
-
-  "test.html": {
-    "type": "jade",
-    "source": "views/test.jade",
-    "dest": {
-      "base": "public",
-      "src": "test.html"
     }
   }
 }
