@@ -2,7 +2,7 @@
 
 Simple static-file build system for jade, stylus, and JavaScript.
 
-Includes express plugin for easily rendering HTML, CSS, and JS in both development and production.
+Includes express plugin for easily rendering built-or-debug HTML, CSS, and JS.
 
 ## Add mason to your project
 ```shell
