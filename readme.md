@@ -128,7 +128,7 @@ To inject individual scripts for debugging, use:
 
 ### Use mason in an express app
 ```javascript
-  var app = express(),
+  var app = express();
   app.locals(mason.locals(__dirname));
 ```
 By default, mason.locals will inject a compressed (uglified) script into your view.
