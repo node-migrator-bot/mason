@@ -35,7 +35,9 @@ function runBuild(options) {
 }
 
 function runWatch(options) {
-  console.log('Not implemented yet -- coming soon!');
+  mason.watch(process.cwd(), {
+    'javascript': options.javascript
+  });
 }
 
 function runHelp(options) {
