@@ -36,6 +36,15 @@ or using devDependencies:
   $ node_modules/.bin/mason build
 ```
 
+## Watch your files
+```shell
+  $ mason watch
+```
+(mason is smart about recompiling - it performs the minimum possible build for each file change)
+```shell
+  $ mason watch -j debug
+```
+
 ## Render a mason asset within a view
 ```jade
 !!! 5
