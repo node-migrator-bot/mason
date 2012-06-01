@@ -71,55 +71,42 @@ To inject individual scripts for debugging, use:
 
 ```json
 {
-  "javascript": "debug",
-  
+  "views": {
+    "type": "jade",
+    "sourceRoot": "views",
+    "sourcePaths": ["test.jade"],
+    "destRoot": "public",
+    "destPath": "test.html"
+  },
+
   "platform.js": {
     "type": "javascript",
-    "source": {
-      "base": "public",
-      "src": [
-        "vendor/underscore-1.3.3.js",
-        "vendor/knockout-2.0.0.js"
-      ]
-    },
-    "dest": {
-      "base": "public",
-      "src": "compiled/platform.js"
-    },
-    "renderer": "uglify"
+    "sourceRoot": "public",
+    "sourcePaths": [
+      "vendor/underscore-1.3.3.js",
+      "vendor/knockout-2.0.0.js"
+    ],
+    "destRoot": "public",
+    "destPath": "compiled/platform.js"
   },
 
   "page.js": {
     "type": "javascript",
-    "source": {
-      "base": "public",
-      "src": [
-        "js/a.js",
-        "js/b.js"
-      ]
-    },
-    "dest": {
-      "base": "public",
-      "src": "compiled/page.js"
-    }
+    "sourceRoot": "public",
+    "sourcePaths": [
+      "js/a.js",
+      "js/b.js"
+    ],
+    "destRoot": "public",
+    "destPath": "compiled/page.js"
   },
 
   "global.css": {
     "type": "stylus",
-    "source": "styles/global.styl",
-    "dest": {
-      "base": "public",
-      "src": "compiled/global.css"
-    }
-  },
-
-  "test.html": {
-    "type": "jade",
-    "source": "views/test.jade",
-    "dest": {
-      "base": "public",
-      "src": "test.html"
-    }
+    "sourceRoot": "styles",
+    "sourcePaths": [ "global.styl" ],
+    "destRoot": "public",
+    "destPath": "compiled/global.css"
   }
 }
 ```
