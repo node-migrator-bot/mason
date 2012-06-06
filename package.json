@@ -1,6 +1,6 @@
 {
 	"name": "mason",
-	"version": "0.0.12",
+	"version": "0.0.13",
 	"description": "simple, fun, static-file builder for jade, stylus, and javascript",
 	"keywords": ["build", "compile", "concatenate", "minify", "uglify", "jade", "stylus", "javascript"],
 	"author": "Hunter Loftis <hunter@hunterloftis.com>",
